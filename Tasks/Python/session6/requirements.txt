@@ -1,0 +1,3 @@
+install the beautifulsoup4 libraries from pip
+install the lxml libraries from pip
+install requests libraries from pip
