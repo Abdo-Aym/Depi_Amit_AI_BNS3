@@ -17,17 +17,9 @@ df =  pd.read_csv('G:/DEPI/Depi_Amit_AI_BNS3/Sources/DataBase/Data_preprocessing
 app = Dash()
 app.title = "Interactive Dashboard"
 num_cols = df.select_dtypes(include='number').columns
-app.layout = html.Div([html.H1("Interactive Dashboard with Pie chart"),
-                       html.Label("Select a value to show in the pie chart"),
-                       dcc.Dropdown(id = 'column-dropdown',
-                                    options = [{'label':col, 'value':col} for col in num_cols],
-                                    value=num_cols[0]),
-                       dcc.Graph(id = 'pie-chart' )
-
-                       ])
 app.layout = html.Div([
     html.H1("Interactive Dashboard with Pie chart"),
-    html.Label("Select a numeric column to group by Month"),
+    html.Label("Select a numeric column to group by Area"),
     dcc.Dropdown(
         id='column-dropdown',
         options=[{'label': col, 'value': col} for col in num_cols],
